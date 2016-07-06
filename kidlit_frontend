@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Kidlit</title>
+	</head>
+	<body>
+	
+		<nav>
+			<ul id="menu">
+			  <li>Kidlit</li>
+			   <li><p>Find Books</p>
+			   	<form>
+			   		<imput type="text">
+			   		<input type="submit">
+			   	</form>
+			   </li>
+			  <li>Login</li>
+			  <li>Sign up</li>
+			</ul>  
+		</nav>
+
+	</body>
+
+
+</html>
