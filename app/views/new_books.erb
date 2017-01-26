@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Kidlit</title>
+	</head>
+<div class="signup">
+	<h2 class="signup-header">Want to write a review on a book we don't have? Enter it here!</h2>
+<form method="post" action="/books/new">
+	Book Title<input class="stack" type ="text" name="title">
+	Booke Author<input class="stack" type="text" name="author">
+	Book Genre<input class="stack" type="text" name="genre">
+	Book Age Group<select name="book_age">
+		<%@age_groups.each do |group| %>
+		<option value="<%=group.id%>"><%=group.age_group%></option>
+		<%end%>
+		</select>
+	<button  class="submit-form" type="submit" value="upload button">upload button</button>
+</form>
+</div>

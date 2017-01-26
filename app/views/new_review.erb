@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Kidlit</title>
+	</head>
+<div class="signup">
+<h2 class="signup-header">Collect a book and write a review for it here</h2>
+<form method="post" action="/reviews/new">
+	Review Content<input class="stack" type ="text" name="content">
+	<% @library.each do |book| %>
+		<input class="stack" type="radio" name="book" value="<%=book.id%>">
+		<%=book.title%>
+	<%end%>
+	<input class="submit-form" type="submit" value="submit">
+</form>
+</div>

@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Kidlit</title>
+	</head>
+<h1 class="books-index"> Want to write a review? Select a book here!</h1>
+<div class="container">
+<div class="age_group">
+	<h2>baby</h2>
+	<% @baby.each do |book| %>
+	<a href="/book/<%=book.id.to_s%>"><div class="book-info">
+	<h3><%= book.title %></h3>
+	</div></a>
+	<% end %>
+</div>
+<div class="age_group">
+	<h2>toddler</h2>
+	<% @toddler.each do |book| %>
+		<a href="/book/<%=book.id%>"><div class="book-info">
+		<h3><%= book.title %></h3>
+		</div></a>
+	<% end %>
+</div>
+<div class="age_group">
+	<h2>kindergarten</h2>
+	<% @kindergarten.each do |book| %>
+		<a href="/book/<%=book.id%>"><div class="book-info">
+		<h3><%= book.title %></h3>
+		</div></a>
+	<% end %>
+</div>
+<div class="age_group">
+	<h2>elementary school</h2>
+	<% @elementary_school.each do |book| %>
+		<a href="/book/<%=book.id%>"><div class="book-info">
+		<h3><%= book.title %></h3>
+		</div></a>
+	<% end %>
+</div>
+<div class="age_group">
+	<h2>middle school</h2>
+	<% @middle_school.each do |book| %>
+		<a href="/book/<%=book.id%>"><div class="book-info">
+		<h3><%= book.title %></h3>
+		</div></a>
+	<% end %>
+</div>
+<div class="age_group">
+	<h2>high school</h2>
+	<% @high_school.each do |book| %>
+		<a href="/book/<%=book.id%>"><div class="book-info">
+		<h3><%= book.title %></h3>
+		</div></a>
+	<% end %>
+</div>
+</div>
+

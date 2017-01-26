@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Kidlit</title>
+	</head>
+	<body class = "homepage">
+	
+		<nav class="homepage_nav">
+			<ul id="menu">
+		
+			
+			  <%if !logged_in?%>
+			   <li><a href="/login">Login</a></li>
+			    <li class="signup_button"><a href="/signup">Sign up</a></li>
+			 
+			   <%end%>
+			</ul>  
+		</nav>
+		<div class="search_form">
+		<form method="post" action="/search">
+			<input class="stack" placeholder="Search for book here" type="text" name="book">
+			<button type = "submit" class="submit-form" value="submit">search</button>
+		</form>
+		</div>
+	</body>
+
+
+</html>

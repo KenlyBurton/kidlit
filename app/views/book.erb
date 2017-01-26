@@ -1,0 +1,29 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+	<div class="primary_book_info">
+		<div class="book_info">
+			<h2 class="book_title"><%= @the_book.title%></h2>
+			<p class="book_author">by <%= @the_book.author%></p>
+			<p class="book_genre">genre: <%= @the_book.genre%></p>
+			<p class="book_age_group">age group: <%= @the_book.age.age_group%></p>
+		</div>
+		<div class="book_review">
+			<form method="post" action="/reviews/new">
+			<p class="review_instructions">Write a review of this book below </p><input class="stack" type ="text" name="content">
+				<input type="hidden" name="book" value="<%=@the_book.id%>">
+				<input class="submit-form" type="submit" value="submit">
+			</form>
+		</div>
+	</div>
+	<div>
+	<p class="review_intro">Here are the reviews of this book</p>
+		<%@the_book.reviews.each do|review|%>
+			<p class="review_content"><%=review.content%></p>
+		<%end%>
+	</div>
+</body>
+
+<!-- //center
+//font size -->
