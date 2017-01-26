@@ -3,6 +3,7 @@ gem "sinatra"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "rake"
+gem "pg"
 group :development do
 gem "pry"
 gem "shotgun"
